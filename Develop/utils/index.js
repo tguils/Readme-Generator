@@ -16,9 +16,18 @@ const fs = require("fs");
       message: 'Enter a description of your project:'
     },
     {
-      type: 'input',
+      type: 'checkbox',
       name: 'table',
-      message: 'Create a table of contents list:'
+      message: 'Create a table of contents list:',
+      choices: [
+        'Installation',
+        'Usage',
+        'License',
+        'Badges',
+        'Contributing',
+        'Github',
+        'Email'
+      ]
     },
     {
       type: 'input',
@@ -53,7 +62,9 @@ const fs = require("fs");
   ];
   
 // TODO: Create a function to write README file
-function writeToFile(answers, data) {
+function writeToFile(answers) {
+
+  const tableOfContents = answers.table.map(item => `- [${item}](#${item.toLowerCase()})`).join('\n');
     return `
     # ${answers.title}
     
@@ -61,13 +72,8 @@ function writeToFile(answers, data) {
     ${answers.description}
     
     ## Table of Contents
-    ${answers.table}
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
+    ${tableOfContents}
+    
     
     ## Installation
     ${answers.installation}
@@ -88,7 +94,7 @@ function writeToFile(answers, data) {
 
     
     ## Questions
-    GitHub Profile: [${answers.githubUsername}](https://github.com/${answers.githubUsername})
+    GitHub Profile: [${answers.github}](https://github.com/${answers.github})
     Email: ${answers.email}
     `;
 }
