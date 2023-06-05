@@ -1,9 +1,9 @@
-# a
-  ![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+# Tess
+  ![License](https://img.shields.io/badge/license-MIT,Apache 2.0,GNU GPLv3-brightgreen.svg)
 
   ## Description
   
-  a
+  This is a readme generator application.
   
   ## Table of Contents
   
@@ -16,17 +16,17 @@
   
   ## Installation
   
-  a
+  The user will use the command line and initiate the app functions by typing "npm start." The user will be brought through a  selection of questions to generate their readme.md file.  Once all the qsections are filled out he use will be presented with a readme file
   
   ## Usage
   
-  a
+  asdf
   
   ## License
 
-This project is licensed under the MIT license.
+This project is licensed under the MIT,Apache 2.0,GNU GPLv3 license.
   
-  ![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)
+  ![License](https://img.shields.io/badge/license-MIT,Apache 2.0,GNU GPLv3-brightgreen.svg)
 
 
   ## Contributing
@@ -41,5 +41,5 @@ This project is licensed under the MIT license.
   
   For any questions, please contact me:
   
-  - GitHub: [undefined](https://github.com/undefined)
-  - Email: a
+  - GitHub: [undefined](https://github.com/tguils)
+  - Email: tess.guilmette@gmail.com

@@ -18,9 +18,10 @@ const generateMarkdown = require('./utils/generateMarkdown');
       message: 'Enter a description of your project:'
     },
     {
-      type: 'input',
+      type: 'checkbox',
       name: 'table',
-      message: 'Create a table of contents list:'
+      message: 'Create a table of contents list:',
+      choices: [ "Title", "Description", "Installation", "Usage", "Licenses", "Contact"]
     },
     {
       type: 'input',
@@ -33,23 +34,11 @@ const generateMarkdown = require('./utils/generateMarkdown');
       message: 'Provide instructions for use (include screenshots):'
     },
     {
-      type: 'list',
+      type: 'checkbox',
       name: 'license',
       message: 'Choose a license for your project:',
       choices: [ "MIT", 'Apache 2.0', 'GNU GPLv3' ]      
-        //   name: 'MIT License',
-        //   value: 'MIT',
-        //   badge: '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)'
-        // },
-        // {
-        //   name: 'Apache License 2.0',
-        //   value: 'Apache 2.0',
-        //   badge: '[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
-        // },
-        // {
-        //   name: 'GNU GPLv3',
-        //   value: 'GNU GPLv3',
-        //   badge: '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)'
+        
         },
     {
       type: 'input',
